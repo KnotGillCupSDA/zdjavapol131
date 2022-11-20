@@ -12,7 +12,7 @@ public class Basket {
 	}
 
 	public int size() {
-		return 0;
+		return books.size();
 	}
 
 	public void add(Book book) {

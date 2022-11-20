@@ -28,6 +28,6 @@ class BasketTest {
 
 		//check if basket size is 1
 		int size = basket.size();
-		assertEquals(1, size);
+		assertEquals(1, size, "Basket should have size 1 after adding one book");
 	}
 }
