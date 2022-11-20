@@ -20,13 +20,15 @@ class PersonDetailsTest {
 
 	@Test
 	void shouldBePerceivedAsTeenager() {
-		PersonDetails personDetails = new PersonDetails("Bartosz", "Wozniak", 11);
-		assertTrue(personDetails.isTeenager());
+		assertTrue(new PersonDetails("Bartosz", "Wozniak", 11).isTeenager());
+		assertTrue(new PersonDetails("Bartosz", "Wozniak", 17).isTeenager());
 	}
 
 	@Test
 	void shouldNotBePerceivedAsTeenager() {
-		PersonDetails personDetails = new PersonDetails("Bartosz", "Wozniak", 8);
-		assertFalse(personDetails.isTeenager());
+		assertFalse(new PersonDetails("Bartosz", "Wozniak", 8).isTeenager());
+		assertFalse(new PersonDetails("Bartosz", "Wozniak", 10).isTeenager());
+		assertFalse(new PersonDetails("Bartosz", "Wozniak", 18).isTeenager());
+		assertFalse(new PersonDetails("Bartosz", "Wozniak", 40).isTeenager());
 	}
 }
