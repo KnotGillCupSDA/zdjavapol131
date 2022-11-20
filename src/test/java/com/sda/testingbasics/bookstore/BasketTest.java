@@ -76,4 +76,18 @@ class BasketTest {
 				.hasSize(3)
 				.containsExactlyInAnyOrder(book1, book2, book3);
 	}
+
+	@Test
+	void shouldCalculateBasketValue() {
+		//add 3 books
+		basket.add(new Book("Potop", "Henryk Sienkiewicz", 45.0));
+		basket.add(new Book("Ogniem i Mieczem", "Henryk Sienkiewicz", 40.0));
+		basket.add(new Book("Pan Wołodyjowski", "Henryk Sienkiewicz", 50.0));
+
+		//get total value
+		double totalValue = basket.sum();
+
+		//verify that total value is as expected
+		assertEquals(135.0, totalValue);
+	}
 }

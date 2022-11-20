@@ -27,4 +27,15 @@ public class Basket {
 	public Collection<Book> getAll() {
 		return new ArrayList<>(books);
 	}
+
+	public double sum() {
+		double sum = 0;
+
+		for(Book book : books) {
+			double price = book.getPrice();
+			sum = sum + price;
+		}
+
+		return sum;
+	}
 }
