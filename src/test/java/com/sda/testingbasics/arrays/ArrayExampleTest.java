@@ -1,7 +1,6 @@
 package com.sda.testingbasics.arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,4 +21,5 @@ class ArrayExampleTest {
 		assertThat(distinctArray)
 				.containsExactlyInAnyOrder("a", "b", "c");
 	}
+
 }
