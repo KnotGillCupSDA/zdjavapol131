@@ -21,4 +21,17 @@ class AirplaneTest {
 		//assert that getHeight returns expected value
 		Assertions.assertEquals(100, airplane.getHeight());
 	}
+
+	@Test
+	void shouldDescent() {
+		//given
+		Airplane airplane = new Airplane();
+
+		//when
+		airplane.ascent(100);
+		airplane.descent(50);
+
+		//then
+		Assertions.assertEquals(50, airplane.getHeight());
+	}
 }
