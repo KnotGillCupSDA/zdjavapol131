@@ -4,6 +4,7 @@ public class Airplane {
 
     private int height;
 
+
     public Airplane() {
         this(0);
     }
