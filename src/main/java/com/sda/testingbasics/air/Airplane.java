@@ -8,7 +8,7 @@ public class Airplane {
         this(0);
     }
 
-    private Airplane(int height) {
+    public Airplane(int height) {
         this.height = height;
     }
 

@@ -25,10 +25,9 @@ class AirplaneTest {
 	@Test
 	void shouldDescent() {
 		//given
-		Airplane airplane = new Airplane();
+		Airplane airplane = new Airplane(100);
 
 		//when
-		airplane.ascent(100);
 		airplane.descent(50);
 
 		//then
