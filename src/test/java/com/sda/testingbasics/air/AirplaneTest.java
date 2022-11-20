@@ -1,5 +1,8 @@
 package com.sda.testingbasics.air;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +24,9 @@ class AirplaneTest {
 
 		//then
 		//assert that getHeight returns expected value
-		Assertions.assertEquals(100, airplane.getHeight());
+		assertEquals(100, airplane.getHeight());
+
+		assertThat(airplane.getHeight()).isEqualTo(100);
 	}
 
 	@Test
@@ -33,13 +38,13 @@ class AirplaneTest {
 		airplane.descent(50);
 
 		//then
-		Assertions.assertEquals(50, airplane.getHeight());
+		assertEquals(50, airplane.getHeight());
 	}
 
 	@Test
 	void thatWeCantGoBelowZero() {
 		airplane.ascent(100);
 		airplane.descent(110);
-		Assertions.assertEquals(0, airplane.getHeight());
+		assertEquals(0, airplane.getHeight());
 	}
 }
