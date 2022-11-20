@@ -4,39 +4,14 @@ public class Calculator {
 
 	private Double lastAddResult;
 
-    public double add(double a, double b) {
+	public double add(double a, double b) {
 		double v = a + b;
 		lastAddResult = v;
 		return v;
-    }
+	}
 
 	public Double getLastAddResult() {
 		return lastAddResult;
 	}
 
-	public double subtract(double a, double b) {
-        return a - b;
-    }
-
-    public double multiply(double a, double b) {
-        return a * b;
-    }
-
-    public double divide(double a, double b) {
-        if(b == 0.0) {
-        	throw new ArithmeticException("Can't divide by 0");
-		}
-    	return a / b;
-    }
-
-    public int factorial(int number) {
-        if (number >= 100) {
-            throw new IllegalArgumentException();
-        }
-        if(number <= 1) {
-            return 1;
-        }
-
-        return number * factorial(number - 1);
-    }
 }
