@@ -17,6 +17,10 @@ public class PersonDetails {
 	}
 
 	public boolean isTeenager() {
-		return age >=11 && age <=17;
+		return age >= 11 && age <= 17;
+	}
+
+	public boolean isAdult() {
+		return age >= 18;
 	}
 }
