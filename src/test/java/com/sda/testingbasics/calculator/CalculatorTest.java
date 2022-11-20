@@ -1,5 +1,6 @@
 package com.sda.testingbasics.calculator;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
@@ -48,6 +49,11 @@ class CalculatorTest {
 		//if(sum == 3) -> ok (green)
 		//else -> fail (red)
 		assertEquals(3.0, sum, "1 + 2 should equals 3");
+
+		//the same assertion but with assertJ
+		assertThat(sum)
+				.as("1 + 2 should equals 3")
+				.isEqualTo(3.0);
 	}
 
 	@Test
